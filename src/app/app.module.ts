@@ -1,26 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms'
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { SignupComponent } from './signup/signup.component';
-import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PostsComponent } from './profile/posts/posts.component';
+import { VideoComponent } from './profile/posts/video/video.component';
+import { TaggedComponent } from './profile/posts/tagged/tagged.component';
+import { PhotoComponent } from './profile/posts/photo/photo.component';
+import { NavigationComponent } from './profile/posts/navigation/navigation.component';
+import { FollowersComponent } from './profile/followers/followers.component';
+import { FollowingComponent } from './profile/following/following.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignupComponent,
-    HomeComponent,
+    ProfileComponent,
+    NavbarComponent,
+    PostsComponent,
+    VideoComponent,
+    TaggedComponent,
+    PhotoComponent,
+    NavigationComponent,
+    FollowersComponent,
+    FollowingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-
+    NgbModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
