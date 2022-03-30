@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Nunito';
+    background-color: #fdf9f9 !important;
+}
+.card{
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+ a:hover{
+     text-decoration: none;
+ }

@@ -1,0 +1,43 @@
+<div class="container text-center my-4 py-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src='{{ object.image }}' alt="logo" class="img-fluid">
+                <h4>{{ object.name }}</h4>
+                <h4>{{ object.username }}</h4>
+                <h6>{{object.bio}}</h6>
+            </div>
+        </div>
+        <div class="col-lg-6 my-auto">
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5>Posts</h5>
+                        <h6>{{ numberOfPosts }}</h6>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>
+                            <a routerLink="/followers">
+                                Followers
+                            </a>
+                        </h5>
+                        <h6>
+                            {{ followers.length }}
+                        </h6>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>
+                            <a routerLink="/following">
+                                Followings
+                            </a>
+                        </h5>
+                        <h6>{{ following.length }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+
+<app-posts></app-posts>
