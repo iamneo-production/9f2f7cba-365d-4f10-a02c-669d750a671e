@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+ 
+  .login-form{
+     box-shadow:0 5px 15px rgba(0,0,0,.2);
+     
+  }
+
+
+</style>
+</head>
+<body >
+   <div class="col-8">
+   <div class="container  p-0 login-form    justify-content-center align-items-center rounded-2"  id="signUpBox" style="border-style:solid;border-color:rgb(22, 22, 85);border-width: thin;background-color:whitesmoke">
+  <div class="col p-3 mb-4" style="background-color:rgb(29, 29, 116);color:white">
+ <h5 style="text-align: left;overflow: hidden;">#PhotoFramed</h5>
+  </div>
+<div class="col mt-2">
+   <span class="material-icons" style="font-size:3rem;color: rgb(29, 29, 116);">account_circle</span> 
+
+    <h1 style="color:rgb(29, 29, 116);">SignUp</h1>
+   </div> 
+   <div class="col mt-4 p-3 form-outline ">
+   <form [formGroup]="signUpForm" (ngSubmit)="loginUser()">
+    <div class="row mb-3">
+        <label  class="col-sm-3 col-form-label">FirstName</label>
+        <div class="col-sm-9">
+          <input ngModel type="text" class="form-control" placeholder="Sai Charan" formControlName="first" id="userFirstName" (blur)="fnerror()">
+        </div></div>
+        <div class="row mb-3">
+            <label  class="col-sm-3 col-form-label"  >LastName</label>
+            <div class="col-sm-9">
+              <input ngModel type="text" class="form-control" placeholder="Poleboina" formControlName="last" id="userLastName" (blur)="lnerror()">
+        </div></div>
+       
+      <div class="row mb-3" >
+        <label  class="col-sm-3  col-form-label" >UserName</label>
+        <div class="col-sm-9">
+          <input ngModel type="text" class="sm-ml-6 form-control" placeholder="sai_charan" id="username" formControlName="user"  (blur)="error1()">
+    </div></div>
+    <div class="row mb-3">
+        <label  class="col-sm-3 col-form-label">Password</label>
+        <div class="col-sm-9">
+          <input ngModel type="password" class="form-control" placeholder="Hello@193" formControlName="pass" id="password"  (blur)="error2()">
+    </div></div>
+     <input type="submit" routerLink="/home"  [disabled]="signUpForm.invalid" value="SignUp" class="btn btn-primary mb-2" />
+      <br>
+      <span>Already a User ? <a routerLink="/login" id="loginLink"  style="color: rgb(29, 29, 116);">Login</a></span>
+   </form>
+</div>
+
+
+</div>
+</div>
+   <script>
+
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
